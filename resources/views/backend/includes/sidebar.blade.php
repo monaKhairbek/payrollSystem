@@ -58,8 +58,14 @@
                 </a>
             </li>
             @endauth-->
-
-             @permission('edit-settings')
+            
+            <li class="{{ active_class(Active::checkUriPattern('admin/department*')) }}">
+                <a href="{{ route('admin.department.index') }}">
+                    <i class="fa fa-file-text"></i>
+                    <span>{{ trans('labels.backend.department.title') }}</span>
+                </a>
+            </li>
+            @permission('edit-settings')
             <li class="{{ active_class(Active::checkUriPattern('admin/settings*')) }}">
                 <a href="{{ route('admin.settings.edit', 1 ) }}">
                     <i class="fa fa-gear"></i>

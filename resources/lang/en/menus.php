@@ -104,6 +104,13 @@ return [
             'management' => 'Faq Management',
             'main'       => 'Faq Pages',
         ],
+        'department' => [
+            'all'        => 'All Department Page',
+            'create'     => 'Create Department Page',
+            'edit'       => 'Edit Department Page',
+            'management' => 'Department Management',
+            'main'       => 'Department Pages',
+        ],
 
         'emailtemplates' => [
             'all'        => 'All Email Template',

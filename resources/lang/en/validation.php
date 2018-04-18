@@ -231,6 +231,10 @@ return [
                     'answer'   => 'Answer',
                     'status'   => 'Status',
             ],
+            'department' => [
+                    'title' => 'Title',
+                    'bonus' => 'Bonus',
+            ],
         ],
 
         'frontend' => [

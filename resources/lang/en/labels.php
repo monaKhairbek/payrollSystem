@@ -223,6 +223,22 @@ return [
                 'all'       => 'All',
             ],
         ],
+        'department' => [
+            'create'     => 'Create Department',
+            'edit'       => 'Edit Department',
+            'management' => 'Department Management',
+            'title'      => 'Department',
+
+            'table' => [
+                'title'     => 'Department',
+                'bonus'     => 'Bonus',
+                'publish'   => 'PublishDateTime',
+                'createdat' => 'Created At',
+                'createdby' => 'Created By',
+                'updatedat' => 'Updated At',
+                'all'       => 'All',
+            ],
+        ],
 
         'menus' => [
             'create'     => 'Create Menu',
