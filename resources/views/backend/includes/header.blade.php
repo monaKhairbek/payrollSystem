@@ -36,7 +36,7 @@
                     </li>
                 @endif
 
-                <li class="dropdown messages-menu">
+<!--                <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope-o"></i>
                         <span class="label label-info">0</span>
@@ -48,7 +48,7 @@
                             {{ link_to('#', trans('strings.backend.general.see_all.messages')) }}
                         </li>
                     </ul>
-                </li><!-- /.messages-menu -->
+                </li> /.messages-menu 
 
                 <li class="dropdown notifications-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -58,7 +58,7 @@
 
                     <ul class="dropdown-menu notification-menu-container">
                     </ul>
-                </li><!-- /.notifications-menu -->
+                </li> /.notifications-menu 
 
                 <li class="dropdown tasks-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -72,7 +72,7 @@
                             {{ link_to('#', trans('strings.backend.general.see_all.tasks')) }}
                         </li>
                     </ul>
-                </li><!-- /.tasks-menu -->
+                </li> /.tasks-menu -->
 
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -90,27 +90,27 @@
                             </p>
                         </li>
 
-                        <li class="user-body">
+<!--                        <li class="user-body">
                             <div class="col-xs-12 text-center">
                                 {{ link_to_route("admin.profile.edit", 'Edit Profile') }}
                             </div>
-                        </li>
-                        <li class="user-body border-left">
+                        </li>-->
+<!--                        <li class="user-body border-left">
                             <div class="col-xs-12 text-center">
                                 {{ link_to_route('admin.access.user.change-password','Change Password', access()->user()->id) }}
                             </div>
                             {{-- <div class="col-xs-4 text-center">
                                 {{ link_to_route('dashboard', 'Link') }}
                             </div> --}}
-                        </li>
+                        </li>-->
 
                         <li class="user-footer">
-                            <div class="pull-left">
+<!--                            <div class="pull-left">
                                 <a href="{!! route('frontend.index') !!}" class="btn btn-default btn-flat">
                                     <i class="fa fa-home"></i>
                                     {{ trans('navs.general.home') }}
                                 </a>
-                            </div>
+                            </div>-->
                             <div class="pull-right">
                                 <a href="{!! route('frontend.auth.logout') !!}" class="btn btn-danger btn-flat">
                                     <i class="fa fa-sign-out"></i>

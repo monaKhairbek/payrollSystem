@@ -16,9 +16,9 @@
         </div><!--navbar-header-->
 
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">
-            <ul class="nav navbar-nav">
+<!--            <ul class="nav navbar-nav">
                 <li>{{ link_to_route('frontend.macros', trans('navs.frontend.macros')) }}</li>
-            </ul>
+            </ul>-->
             <ul class="nav navbar-nav navbar-right">
                 @if (config('locale.status') && count(config('locale.languages')) > 1)
                     <li class="dropdown">
@@ -31,9 +31,9 @@
                     </li>
                 @endif
 
-                @if ($logged_in_user)
+<!--                @if ($logged_in_user)
                     <li>{{ link_to_route('frontend.user.dashboard', trans('navs.frontend.dashboard')) }}</li>
-                @endif
+                @endif-->
 
                 @if (! $logged_in_user)
                     <li>{{ link_to_route('frontend.auth.login', trans('navs.frontend.login')) }}</li>
@@ -52,7 +52,7 @@
                                 <li>{{ link_to_route('admin.dashboard', trans('navs.frontend.user.administration')) }}</li>
                             @endauth
 
-                            <li>{{ link_to_route('frontend.user.account', trans('navs.frontend.user.account')) }}</li>
+<!--                            <li>{{ link_to_route('frontend.user.account', trans('navs.frontend.user.account')) }}</li>-->
                             <li>{{ link_to_route('frontend.auth.logout', trans('navs.general.logout')) }}</li>
                         </ul>
                     </li>

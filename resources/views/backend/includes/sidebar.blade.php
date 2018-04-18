@@ -6,7 +6,7 @@
     <section class="sidebar">
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">{{ trans('menus.backend.sidebar.general') }}</li>
+<!--            <li class="header">{{ trans('menus.backend.sidebar.general') }}</li>-->
 
             <li class="{{ active_class(Active::checkUriPattern('admin/dashboard')) }}">
                 <a href="{{ route('admin.dashboard') }}">
@@ -40,21 +40,30 @@
                         </a>
                     </li>
                     @endauth
-                    @permission('view-permission-management')
+<!--                    @permission('view-permission-management')
                     <li class="{{ active_class(Active::checkUriPattern('admin/access/permission*')) }}">
                         <a href="{{ route('admin.access.permission.index') }}">
                             <span>{{ trans('labels.backend.access.permissions.management') }}</span>
                         </a>
                     </li>
-                    @endauth
+                    @endauth-->
                 </ul>
             </li>
             @endauth
-            @permission('view-page')
+<!--            @permission('view-page')
             <li class="{{ active_class(Active::checkUriPattern('admin/pages*')) }}">
                 <a href="{{ route('admin.pages.index') }}">
                     <i class="fa fa-file-text"></i>
                     <span>{{ trans('labels.backend.pages.title') }}</span>
+                </a>
+            </li>
+            @endauth-->
+
+             @permission('edit-settings')
+            <li class="{{ active_class(Active::checkUriPattern('admin/settings*')) }}">
+                <a href="{{ route('admin.settings.edit', 1 ) }}">
+                    <i class="fa fa-gear"></i>
+                    <span>{{ trans('labels.backend.settings.title') }}</span>
                 </a>
             </li>
             @endauth
@@ -66,21 +75,15 @@
                 </a>
             </li>
             @endauth
-            @permission('edit-settings')
-            <li class="{{ active_class(Active::checkUriPattern('admin/settings*')) }}">
-                <a href="{{ route('admin.settings.edit', 1 ) }}">
-                    <i class="fa fa-gear"></i>
-                    <span>{{ trans('labels.backend.settings.title') }}</span>
-                </a>
-            </li>
-            @endauth
-            <li class="{{ active_class(Active::checkUriPattern('admin/modules*')) }}">
+           
+            
+<!--            <li class="{{ active_class(Active::checkUriPattern('admin/modules*')) }}">
                 <a href="{{ route('admin.modules.index') }}">
                     <i class="fa fa-gear"></i>
                     <span>{{ trans('generator::menus.modules.management') }}</span>
                 </a>
-            </li>
-            @permission('view-blog')
+            </li>-->
+<!--            @permission('view-blog')
             <li class="{{ active_class(Active::checkUriPattern('admin/blog*')) }} treeview">
                 <a href="#">
                     <i class="fa fa-commenting"></i>
@@ -112,17 +115,17 @@
                     @endauth
                 </ul>
             </li>
-            @endauth
+            @endauth-->
 
-            @permission('view-faq')
+<!--            @permission('view-faq')
                 <li class="{{ active_class(Active::checkUriPattern('admin/faqs*')) }}">
                 <a href="{{ route('admin.faqs.index')}}">
                     <i class="fa fa-question-circle"></i>
                     <span>{{ trans('labels.backend.faqs.title') }}</span>
                 </a>
                 </li>
-            @endauth
-
+            @endauth-->
+<!--
             <li class="{{ active_class(Active::checkUriPattern('admin/log-viewer*')) }} treeview">
                 <a href="#">
                     <i class="fa fa-list"></i>
@@ -143,6 +146,7 @@
                     </li>
                 </ul>
             </li>
+            -->
         </ul><!-- /.sidebar-menu -->
     </section><!-- /.sidebar -->
 </aside>
