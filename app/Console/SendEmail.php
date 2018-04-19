@@ -21,9 +21,9 @@ class SendEmail extends Command {
 
         Mail::send('emails.test', $data, function ($message) {
 
-            $message->from('mona.mahmoud00@gmail.com');
+            $message->from('admin@admin.com');
 
-            $message->to('mona.mahmoud00@gmail.com')->subject('Payroll Reminder');
+            $message->to('admin@admin.com')->subject('Payroll Reminder');
         });
         $this->info('The emails are send successfully!');
     }

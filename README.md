@@ -1,15 +1,6 @@
 
 ## Introduction
 * This App to help adminnistrators to track the payroll of employees
-* This is a laravel Admin Panel, based on [Rappasoft Laravel Boilerplate](https://github.com/rappasoft/laravel-5-boilerplate/releases/tag/4.5.7), with enhancemenets and many modules pre-made, just for you.
-
-
-## Features
-For Laravel 5 Boilerplate Features : [Features](https://github.com/rappasoft/laravel-5-boilerplate/wiki#features)
-
-
-Give your project a Head Start by using [laravel-adminpanel](https://github.com/viralsolani/laravel-adminpanel).
-
 
 ## Installation
 
