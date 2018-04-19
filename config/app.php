@@ -202,6 +202,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Bvipul\Generator\Provider\CrudGeneratorServiceProvider::class,
+        App\Providers\EmployeesSalariesServiceProvider::class,
     ],
 
     /*
@@ -263,6 +264,7 @@ return [
         'Socialite'   => Laravel\Socialite\Facades\Socialite::class,
         'JWTAuth'     => Tymon\JWTAuth\Facades\JWTAuth::class,
         //'Datatables' => Yajra\DataTables\Facades\DataTables::class
+        'EmployeesSalaries' => App\Providers\EmployeesSalariesServiceProvider::class,
 
     ],
 

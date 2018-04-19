@@ -102,4 +102,5 @@ class User extends Authenticatable implements JWTSubject
             'last_updated_at' => $this->updated_at->toIso8601String(),
         ];
     }
+    
 }
