@@ -1,0 +1,194 @@
+{
+	"id": "e238a15c-8988-5d55-14f7-192e4365299b",
+	"name": "payrollSystem",
+	"description": "",
+	"order": [
+		"38fd6eed-47aa-1979-4fae-5f52f64de1fb",
+		"a2281624-0eeb-cc7c-ee7d-e2ca0143dde1",
+		"cfb5e563-2cc6-8a12-86cc-be16be94b12e",
+		"a56b0a0a-a59e-d43f-d5fe-c65773520277",
+		"eadb16fb-b1eb-e458-3ac0-122404dcb9bb"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1524172762998,
+	"owner": "563799",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "38fd6eed-47aa-1979-4fae-5f52f64de1fb",
+			"headers": "//token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGF5cm9sbHN5c3RlbS5sb2NhbC5jb20vYXBpL3YxL2F1dGgvbG9nahZG1pbi5jb20iLCJwaWN0dXJlIjoiaHR0cHM6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci82NGUxYjhkMzRmNDI1ZDE5ZTFlZTJlYTcyMzZkMzAyOC5qcGc_cz04MCZkPW1tJnI9ZyIsImNvbmZpcm1lZCI6MSwicmVnaXN0ZXJlZF9hdCI6IjIwMTgtMDQtMThUMTk6NTY6MzMrMDA6MDAiLCJsYXN0X3VwZGF0ZWRfYXQiOiIyMDE4LTA0LTE4VDE5OjU2OjMzKzAwOjAwIn0.t9BViHeFcckRzjin6Jx1AO7m97EuXdTYMxPrsDSHDOs\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGF5cm9sbHN5c3RlbS5sb2NhbC5jb20vYXBpL3YxL2F1dGgvbG9nahZG1pbi5jb20iLCJwaWN0dXJlIjoiaHR0cHM6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci82NGUxYjhkMzRmNDI1ZDE5ZTFlZTJlYTcyMzZkMzAyOC5qcGc_cz04MCZkPW1tJnI9ZyIsImNvbmZpcm1lZCI6MSwicmVnaXN0ZXJlZF9hdCI6IjIwMTgtMDQtMThUMTk6NTY6MzMrMDA6MDAiLCJsYXN0X3VwZGF0ZWRfYXQiOiIyMDE4LTA0LTE4VDE5OjU2OjMzKzAwOjAwIn0.t9BViHeFcckRzjin6Jx1AO7m97EuXdTYMxPrsDSHDOs",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://payrollsystem.local.com/api/v1/year-payroll?department=2",
+			"queryParams": [
+				{
+					"key": "department",
+					"value": "2",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGF5cm9sbHN5c3RlbS5sb2NhbC5jb20vYXBpL3YxL2F1dGgvbG9naW4iLCJpYXQiOjE1MjQxNzMzMjgsImV4cCI6MTUyNDE3NjkyOCwibmJmIjoxNTI0MTczMzI4LCJqdGkiOiJmdHBFckFndXhua291blExIiwic3ViIjozLCJwcnYiOiI5NGRiZDk2MWFhZWYwZTNjZTY2YWQ3ZDUwZTY0NzcxNzYwOWRkYTI0IiwiaWQiOjMsImZpcnN0X25hbWUiOiJVc2VyIiwibGFzdF9uYW1lIjoiVGVzdCIsImRlcGFydG1lbnRfaWQiOjIsInNhbGFyeSI6IjAuMDAiLCJib251cyI6IjEwLjAwIiwiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvODhiODc2OThiZTBiYzQ2MWYzY2FjZjFmMDgwOTI5ZDUuanBnP3M9ODAmZD1tbSZyPWciLCJjb25maXJtZWQiOjEsInJlZ2lzdGVyZWRfYXQiOiIyMDE4LTA0LTE4VDE5OjU2OjMzKzAwOjAwIiwibGFzdF91cGRhdGVkX2F0IjoiMjAxOC0wNC0xOVQwNjozNTo1NiswMDowMCJ9.pAEln3m5BgUnrzVx9plwXiXwGUSIEiBpkdUEUscWHjY"
+					}
+				],
+				"type": "bearer"
+			},
+			"time": 1524174084481,
+			"name": "GetYearPayRoll",
+			"description": "",
+			"collectionId": "e238a15c-8988-5d55-14f7-192e4365299b",
+			"responses": [],
+			"currentHelper": "bearerAuth",
+			"helperAttributes": {
+				"id": "bearer",
+				"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGF5cm9sbHN5c3RlbS5sb2NhbC5jb20vYXBpL3YxL2F1dGgvbG9naW4iLCJpYXQiOjE1MjQxNzMzMjgsImV4cCI6MTUyNDE3NjkyOCwibmJmIjoxNTI0MTczMzI4LCJqdGkiOiJmdHBFckFndXhua291blExIiwic3ViIjozLCJwcnYiOiI5NGRiZDk2MWFhZWYwZTNjZTY2YWQ3ZDUwZTY0NzcxNzYwOWRkYTI0IiwiaWQiOjMsImZpcnN0X25hbWUiOiJVc2VyIiwibGFzdF9uYW1lIjoiVGVzdCIsImRlcGFydG1lbnRfaWQiOjIsInNhbGFyeSI6IjAuMDAiLCJib251cyI6IjEwLjAwIiwiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvODhiODc2OThiZTBiYzQ2MWYzY2FjZjFmMDgwOTI5ZDUuanBnP3M9ODAmZD1tbSZyPWciLCJjb25maXJtZWQiOjEsInJlZ2lzdGVyZWRfYXQiOiIyMDE4LTA0LTE4VDE5OjU2OjMzKzAwOjAwIiwibGFzdF91cGRhdGVkX2F0IjoiMjAxOC0wNC0xOVQwNjozNTo1NiswMDowMCJ9.pAEln3m5BgUnrzVx9plwXiXwGUSIEiBpkdUEUscWHjY"
+			}
+		},
+		{
+			"id": "a2281624-0eeb-cc7c-ee7d-e2ca0143dde1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://payrollsystem.local.com/api/v1/auth/logout",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGF5cm9sbHN5c3RlbS5sb2NhbC5jb20vYXBpL3YxL2F1dGgvbG9naW4iLCJpYXQiOjE1MjQxNzI5MzMsImV4cCI6MTUyNDE3NjUzMywibmJmIjoxNTI0MTcyOTMzLCJqdGkiOiJ3dU1ZbjhiWTE3UXhjUUw3Iiwic3ViIjoxLCJwcnYiOiI5NGRiZDk2MWFhZWYwZTNjZTY2YWQ3ZDUwZTY0NzcxNzYwOWRkYTI0IiwiaWQiOjEsImZpcnN0X25hbWUiOiJWaXJhbCIsImxhc3RfbmFtZSI6IlNvbGFuaSIsImRlcGFydG1lbnRfaWQiOjAsInNhbGFyeSI6IjAuMDAiLCJib251cyI6IjEwLjAwIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJwaWN0dXJlIjoiaHR0cHM6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci82NGUxYjhkMzRmNDI1ZDE5ZTFlZTJlYTcyMzZkMzAyOC5qcGc_cz04MCZkPW1tJnI9ZyIsImNvbmZpcm1lZCI6MSwicmVnaXN0ZXJlZF9hdCI6IjIwMTgtMDQtMThUMTk6NTY6MzMrMDA6MDAiLCJsYXN0X3VwZGF0ZWRfYXQiOiIyMDE4LTA0LTE4VDE5OjU2OjMzKzAwOjAwIn0.HKYpvBOnEZeBXPD0CaKI52aa277TtqMq8Trlyn91000"
+					}
+				],
+				"type": "bearer"
+			},
+			"time": 1524172960519,
+			"name": "Logout",
+			"description": "",
+			"collectionId": "e238a15c-8988-5d55-14f7-192e4365299b",
+			"responses": [],
+			"currentHelper": "bearerAuth",
+			"helperAttributes": {
+				"id": "bearer",
+				"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGF5cm9sbHN5c3RlbS5sb2NhbC5jb20vYXBpL3YxL2F1dGgvbG9naW4iLCJpYXQiOjE1MjQxNzI5MzMsImV4cCI6MTUyNDE3NjUzMywibmJmIjoxNTI0MTcyOTMzLCJqdGkiOiJ3dU1ZbjhiWTE3UXhjUUw3Iiwic3ViIjoxLCJwcnYiOiI5NGRiZDk2MWFhZWYwZTNjZTY2YWQ3ZDUwZTY0NzcxNzYwOWRkYTI0IiwiaWQiOjEsImZpcnN0X25hbWUiOiJWaXJhbCIsImxhc3RfbmFtZSI6IlNvbGFuaSIsImRlcGFydG1lbnRfaWQiOjAsInNhbGFyeSI6IjAuMDAiLCJib251cyI6IjEwLjAwIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJwaWN0dXJlIjoiaHR0cHM6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci82NGUxYjhkMzRmNDI1ZDE5ZTFlZTJlYTcyMzZkMzAyOC5qcGc_cz04MCZkPW1tJnI9ZyIsImNvbmZpcm1lZCI6MSwicmVnaXN0ZXJlZF9hdCI6IjIwMTgtMDQtMThUMTk6NTY6MzMrMDA6MDAiLCJsYXN0X3VwZGF0ZWRfYXQiOiIyMDE4LTA0LTE4VDE5OjU2OjMzKzAwOjAwIn0.HKYpvBOnEZeBXPD0CaKI52aa277TtqMq8Trlyn91000"
+			}
+		},
+		{
+			"id": "a56b0a0a-a59e-d43f-d5fe-c65773520277",
+			"headers": "",
+			"headerData": [],
+			"url": "http://payrollsystem.local.com/api/v1/departments",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGF5cm9sbHN5c3RlbS5sb2NhbC5jb20vYXBpL3YxL2F1dGgvbG9naW4iLCJpYXQiOjE1MjQxNzMzMjgsImV4cCI6MTUyNDE3NjkyOCwibmJmIjoxNTI0MTczMzI4LCJqdGkiOiJmdHBFckFndXhua291blExIiwic3ViIjozLCJwcnYiOiI5NGRiZDk2MWFhZWYwZTNjZTY2YWQ3ZDUwZTY0NzcxNzYwOWRkYTI0IiwiaWQiOjMsImZpcnN0X25hbWUiOiJVc2VyIiwibGFzdF9uYW1lIjoiVGVzdCIsImRlcGFydG1lbnRfaWQiOjIsInNhbGFyeSI6IjAuMDAiLCJib251cyI6IjEwLjAwIiwiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvODhiODc2OThiZTBiYzQ2MWYzY2FjZjFmMDgwOTI5ZDUuanBnP3M9ODAmZD1tbSZyPWciLCJjb25maXJtZWQiOjEsInJlZ2lzdGVyZWRfYXQiOiIyMDE4LTA0LTE4VDE5OjU2OjMzKzAwOjAwIiwibGFzdF91cGRhdGVkX2F0IjoiMjAxOC0wNC0xOVQwNjozNTo1NiswMDowMCJ9.pAEln3m5BgUnrzVx9plwXiXwGUSIEiBpkdUEUscWHjY"
+					}
+				],
+				"type": "bearer"
+			},
+			"time": 1524174083160,
+			"name": "getDepartments",
+			"description": "",
+			"collectionId": "e238a15c-8988-5d55-14f7-192e4365299b",
+			"responses": [],
+			"currentHelper": "bearerAuth",
+			"helperAttributes": {
+				"id": "bearer",
+				"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGF5cm9sbHN5c3RlbS5sb2NhbC5jb20vYXBpL3YxL2F1dGgvbG9naW4iLCJpYXQiOjE1MjQxNzMzMjgsImV4cCI6MTUyNDE3NjkyOCwibmJmIjoxNTI0MTczMzI4LCJqdGkiOiJmdHBFckFndXhua291blExIiwic3ViIjozLCJwcnYiOiI5NGRiZDk2MWFhZWYwZTNjZTY2YWQ3ZDUwZTY0NzcxNzYwOWRkYTI0IiwiaWQiOjMsImZpcnN0X25hbWUiOiJVc2VyIiwibGFzdF9uYW1lIjoiVGVzdCIsImRlcGFydG1lbnRfaWQiOjIsInNhbGFyeSI6IjAuMDAiLCJib251cyI6IjEwLjAwIiwiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvODhiODc2OThiZTBiYzQ2MWYzY2FjZjFmMDgwOTI5ZDUuanBnP3M9ODAmZD1tbSZyPWciLCJjb25maXJtZWQiOjEsInJlZ2lzdGVyZWRfYXQiOiIyMDE4LTA0LTE4VDE5OjU2OjMzKzAwOjAwIiwibGFzdF91cGRhdGVkX2F0IjoiMjAxOC0wNC0xOVQwNjozNTo1NiswMDowMCJ9.pAEln3m5BgUnrzVx9plwXiXwGUSIEiBpkdUEUscWHjY"
+			}
+		},
+		{
+			"id": "cfb5e563-2cc6-8a12-86cc-be16be94b12e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://payrollsystem.local.com/api/v1/auth/login",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "email",
+					"value": "user@user.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "1234",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"auth": {
+				"type": "noauth"
+			},
+			"time": 1524174085701,
+			"name": "Login",
+			"description": "",
+			"collectionId": "e238a15c-8988-5d55-14f7-192e4365299b",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "eadb16fb-b1eb-e458-3ac0-122404dcb9bb",
+			"headers": "",
+			"headerData": [],
+			"url": "http://payrollsystem.local.com/api/v1/auth/refresh",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "POST",
+			"collectionId": "e238a15c-8988-5d55-14f7-192e4365299b",
+			"data": null,
+			"dataMode": "params",
+			"name": "RefreshToken",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1524172918994,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}
