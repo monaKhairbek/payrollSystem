@@ -15,18 +15,24 @@ class EmployeesSalariesService {
     }
 
     Public static function getTotalBonus($department = null) {
+        
+        $users = User::all();
         if ($department) {
-            return User::where('department_id', $department)->sum('bonus');
+            $users = User::where('department_id', $department)->get();
         }
-        return User::sum('bonus');
+        $totalBonus = 0;
+        foreach($users as $user){
+            $totalBonus += $user->salary*$user->bonus/100;
+        }
+        return $totalBonus;
     }
 
     public static function getTotalPayroll($department = null) {
 
         if ($department) {
-            return (User::where('department_id', $department)->sum('bonus') + User::where('department_id', $department)->sum('salary'));
+            return (EmployeesSalariesService::getTotalBonus($department) + User::where('department_id', $department)->sum('salary'));
         }
-        return (User::sum('bonus') + User::sum('salary'));
+        return (EmployeesSalariesService::getTotalBonus() + User::sum('salary'));
     }
 
     public static function getPayrollSalaryDate($monthNumber) {
