@@ -11,13 +11,14 @@ use Illuminate\Http\Request;
 /**
  * Class DashboardController.
  */
-class DashboardController extends Controller
-{
+class DashboardController extends Controller {
+
     /**
      * @return \Illuminate\View\View
      */
-    public function index()
-    {
+    public function index() {
+
+      
         return view('backend.dashboard');
     }
 
@@ -26,10 +27,9 @@ class DashboardController extends Controller
      *
      * @return view
      */
-    public function editProfile(Request $request)
-    {
+    public function editProfile(Request $request) {
         return view('backend.access.users.profile-edit')
-            ->withLoggedInUser(access()->user());
+                        ->withLoggedInUser(access()->user());
     }
 
     /**
@@ -37,8 +37,7 @@ class DashboardController extends Controller
      *
      * @return view
      */
-    public function updateProfile(Request $request)
-    {
+    public function updateProfile(Request $request) {
         $input = $request->all();
         $userId = access()->user()->id;
         $user = User::find($userId);
@@ -48,7 +47,7 @@ class DashboardController extends Controller
 
         if ($user->save()) {
             return redirect()->route('admin.profile.edit')
-                ->withFlashSuccess(trans('labels.backend.profile_updated'));
+                            ->withFlashSuccess(trans('labels.backend.profile_updated'));
         }
     }
 
@@ -57,8 +56,7 @@ class DashboardController extends Controller
      *
      * @param Request $request
      */
-    public function getPermissionByRole(Request $request)
-    {
+    public function getPermissionByRole(Request $request) {
         if ($request->ajax()) {
             $role_id = $request->get('role_id');
             $rsRolePermissions = Role::where('id', $role_id)->first();
@@ -73,4 +71,5 @@ class DashboardController extends Controller
             die;
         }
     }
+
 }

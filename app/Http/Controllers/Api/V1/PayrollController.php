@@ -3,91 +3,66 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Access\User\User;
+use App\Models\Department\Department;
 use Illuminate\Http\Request;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
+use App\Helpers\EmployeesSalariesService;
 use Validator;
+use Carbon\Carbon as Carbon;
 
-class AuthController extends APIController
+class PayrollController extends APIController
 {
-    /**
-     * Log the user in.
-     *
-     * @param Request $request
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function login(Request $request)
-    {
+    
+    public function yearPayroll(Request $request){
+        
         $validation = Validator::make($request->all(), [
-            'email'     => 'required|email',
-            'password'  => 'required|min:4',
+            'department'     => 'integer',
         ]);
-
+        
         if ($validation->fails()) {
             return $this->throwValidation($validation->messages()->first());
         }
+        
+        
+        $allPayrollArr = array();
+        $dt = Carbon::now();
 
-        $credentials = $request->only(['email', 'password']);
+        for ($i = $dt->month; $i <= 12; $i++) {
 
-        try {
-            if (!$token = JWTAuth::attempt($credentials)) {
-                return $this->throwValidation(trans('api.messages.login.failed'));
-            }
-        } catch (JWTException $e) {
-            return $this->respondInternalError($e->getMessage());
+            $monthPayrollArr = array();
+
+            $monthPayrollArr['Month'] = EmployeesSalariesService::getMonthName($i);
+            $monthPayrollArr['Salaries_payment_day'] = EmployeesSalariesService::getPayrollSalaryDate($i);
+            $monthPayrollArr['Bonus_payment_day'] = EmployeesSalariesService::getPayrollBonusDate($i);
+            $monthPayrollArr['Salaries_total'] = EmployeesSalariesService::getTotalSalaries($request->only(['department']));
+            $monthPayrollArr['Bonus_total'] = EmployeesSalariesService::getTotalBonus($request->only(['department']));
+            $monthPayrollArr['Payments_total'] = EmployeesSalariesService::getTotalPayroll($request->only(['department']));
+
+            $allPayrollArr[] = $monthPayrollArr;
         }
-
+       
+        
         return $this->respond([
-            'message'   => trans('api.messages.login.success'),
-            'token'     => $token,
+            'message'   => 'success',
+            'Months'  => $allPayrollArr,
         ]);
     }
+    
+    public function getDepartments(){
 
-    /**
-     * Log the user out (Invalidate the token).
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function logout()
-    {
-        try {
-            $token = JWTAuth::getToken();
-
-            if ($token) {
-                JWTAuth::invalidate($token);
-            }
-        } catch (JWTException $e) {
-            return $this->respondInternalError($e->getMessage());
+        $departmentsArr = array();
+        
+        $departments = Department::get();
+        foreach($departments as $department){
+            $departmentArr = array();
+            $departmentArr['id'] = $department->id;
+            $departmentArr['name'] = $department->title;
+            $departmentsArr[] =  $departmentArr;
         }
-
         return $this->respond([
-            'message'   => trans('api.messages.logout.success'),
-        ]);
-    }
-
-    /**
-     * Refresh a token.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function refresh()
-    {
-        $token = JWTAuth::getToken();
-
-        if (!$token) {
-            $this->respondUnauthorized(trans('api.messages.refresh.token.not_provided'));
-        }
-
-        try {
-            $refreshedToken = JWTAuth::refresh($token);
-        } catch (JWTException $e) {
-            return $this->respondInternalError($e->getMessage());
-        }
-
-        return $this->respond([
-            'status' => trans('api.messages.refresh.status'),
-            'token'  => $refreshedToken,
+            'message'   => 'success',
+            'departments'  => $departmentsArr,
         ]);
     }
 }

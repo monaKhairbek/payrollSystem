@@ -8,7 +8,7 @@ use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Validator;
 
-class PayrollController extends APIController
+class AuthController extends APIController
 {
     /**
      * Log the user in.
