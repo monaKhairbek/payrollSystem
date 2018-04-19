@@ -48,6 +48,33 @@
                         {{ Form::text('email', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.users.email'), 'required' => 'required']) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
+                
+                  {{-- Department --}}
+                <div class="form-group">
+                    {{ Form::label('Department', trans('validation.attributes.backend.access.users.department'), ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::select('department_id', $departments, null, ['class' => 'form-control box-size', 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+                
+                {{-- Salary --}}
+                <div class="form-group">
+                    {{ Form::label('Salary', trans('validation.attributes.backend.access.users.salary'), ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('salary', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.users.salary'), 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+                {{-- Bonus --}}
+                <div class="form-group">
+                    {{ Form::label('Bonus', trans('validation.attributes.backend.access.users.bonus'), ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('bonus', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.users.bonus'), 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+                
 
                 {{-- Status --}}
                 @if ($user->id != 1)

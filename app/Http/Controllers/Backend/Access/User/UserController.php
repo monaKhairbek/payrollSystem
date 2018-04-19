@@ -14,6 +14,7 @@ use App\Models\Access\Permission\Permission;
 use App\Models\Access\User\User;
 use App\Repositories\Backend\Access\Role\RoleRepository;
 use App\Repositories\Backend\Access\User\UserRepository;
+use App\Models\Department\Department;
 
 /**
  * Class UserController.
@@ -58,7 +59,7 @@ class UserController extends Controller
     public function create(CreateUserRequest $request)
     {
         return view('backend.access.users.create')->with([
-            'roles' => $this->roles->getAll(),
+            'roles' => $this->roles->getAll(), 'departments' =>  Department::pluck('title', 'id')
         ]);
     }
 
@@ -103,6 +104,7 @@ class UserController extends Controller
             'roles'           => $this->roles->getAll(),
             'userPermissions' => $userPermissions,
             'permissions'     => $permissions,
+            'departments'     => Department::pluck('title', 'id'),
         ]);
     }
 
